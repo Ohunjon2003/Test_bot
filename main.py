@@ -4,6 +4,11 @@ from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update, ReplyKe
 from telegram.ext import ApplicationBuilder, CommandHandler, CallbackQueryHandler, MessageHandler, filters, ContextTypes
 from openpyxl import Workbook
 from datetime import datetime
+import os
+from telegram.ext import ApplicationBuilder, CommandHandler
+TOKEN = os.getenv("TOKEN")
+
+app = ApplicationBuilder().token(TOKEN).build()
 
 TOKEN = os.getenv("TOKEN")
 
