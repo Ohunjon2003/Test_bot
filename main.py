@@ -10,9 +10,7 @@ TOKEN = os.getenv("TOKEN")
 
 app = ApplicationBuilder().token(TOKEN).build()
 
-TOKEN = os.getenv("TOKEN")
 
-app = ApplicationBuilder().token(TOKEN).build()
 
 MAIN_ADMIN_ID = 1762920259
 MAIN_ADMIN_USERNAME = 'oxunjon_xamitjonov'
@@ -345,7 +343,7 @@ async def export_results(update: Update, context: ContextTypes.DEFAULT_TYPE, key
     await update.message.reply_document(document=open(file_path, "rb"))
 
 def main():
-    app = ApplicationBuilder().token(TOKEN).build()
+
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CallbackQueryHandler(button_handler))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, message_handler))
